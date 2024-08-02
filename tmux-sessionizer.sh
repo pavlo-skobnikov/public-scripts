@@ -18,4 +18,4 @@ if [[ -z "$selected" ]]; then
     exit 0
 fi
 
-$PUBLIC_SCRIPTS/tmux-open-or-create-session.sh $selected
+~/tmux-open-or-create-session.sh $selected
