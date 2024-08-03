@@ -7,6 +7,7 @@ if [[ $# -eq 1 ]]; then
     selected="$1"
 else
     selected=$(find \
+        ~ \
         ~/dotfiles \
         ~/dev/projects \
         ~/dev/projects/work \
@@ -18,4 +19,4 @@ if [[ -z "$selected" ]]; then
     exit 0
 fi
 
-~/tmux-open-or-create-session.sh $selected
+tmux-open-or-create-session.sh $selected
