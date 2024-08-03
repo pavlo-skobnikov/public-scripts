@@ -10,7 +10,7 @@ for dir in ~/dotfiles/*/; do
     basename_dir=$(basename $dir)
 
     echo "Stowing $basename_dir"
-    
+
     # Unstow the directory if it is already stowed.
     stow -D $basename_dir
     # Stow the directory.
