@@ -8,12 +8,12 @@ session_name=$(basename "$1" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z "$TMUX" ]] && [[ -z "$tmux_running" ]]; then
-    tmux new-session -s "$session_name" -c "$session_path"
-    exit 0
+	tmux new-session -s "$session_name" -c "$session_path"
+	exit 0
 fi
 
 if ! tmux has-session -t="$session_name" 2>/dev/null; then
-    tmux new-session -ds "$session_name" -c "$session_path"
+	tmux new-session -ds "$session_name" -c "$session_path"
 fi
 
 tmux switch-client -t "$session_name"
