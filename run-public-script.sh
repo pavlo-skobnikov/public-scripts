@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## I forget which scripts I have 😓 This script allows easily picking which
+## I forget what scripts I have 😓 This script allows easily picking which
 ## other public script to run.
 pushd ~/public-scripts || exit
 
