@@ -15,7 +15,6 @@
 ##       and switch to it.
 
 def main [session_path: string] {
-    print $session_path
     let session_name = get_session_name_from_path $session_path
 
     if not (is_an_active_session_present $session_name) {
@@ -26,7 +25,6 @@ def main [session_path: string] {
 }
 
 def "main common-paths" [] {
-    print "common"
     let session_path = select_common_path_for_session
     let session_name = get_session_name_from_path $session_path
 
